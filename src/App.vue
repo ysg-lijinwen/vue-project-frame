@@ -18,5 +18,5 @@
 }
 </style>
 <style scoped>
-@import url("css/common.css");
+@import url("./assets/css/common.css");
 </style>
