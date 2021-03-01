@@ -1,0 +1,247 @@
+/* 滚动条css */
+.scroll-bar {
+    overflow: auto;
+    /* -ms-overflow-style: none\0; */
+}
+
+.scroll-bar::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 7px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 10px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background: #C8C9CC;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 10px;
+    background: #FFFFFF;
+    /* f0f0f0 */
+    opacity: 0.8;
+}
+
+/* 横向 */
+.landscape {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 纵向 */
+.portrait {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 两边对齐 */
+.justified {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+/* 横向布局-居右 */
+.horizontal-layer-right {
+    display: flex;
+    flex-direction: row;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+/* 横向布局-居左 */
+.horizontal-layer-left {
+    display: flex;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+/* 占满剩余 */
+.take-up-rest {
+    display: flex;
+    flex: 1;
+}
+
+/* 横向居中 */
+.horizontal-center {
+    display: flex;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* 居中 */
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* 让子元素垂直居中*/
+
+.center-vertically {
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* 底部居中 */
+.bottom-center {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.Q-Zhong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-img {
+    margin-right: 6px;
+}
+
+/* 动画 */
+/* 下移 */
+.move-down {
+    animation: move-down-anim 0.5s linear;
+    animation-fill-mode: forwards
+}
+
+/* 上移 */
+.move-up {
+    animation: move-up-anim 0.5s linear;
+    animation-fill-mode: forwards
+}
+
+/* 加载 */
+.loading {
+    animation: loading 0.5s linear;
+    animation-fill-mode: forwards
+}
+
+/* 消失 */
+.disappear {
+    animation: disappear-anim 0.5s linear;
+    animation-fill-mode: forwards
+}
+
+/* 拉出 */
+.pull-out {
+    animation: pull-out-amin 0.5s linear;
+    animation-fill-mode: forwards
+}
+
+/* 收起 */
+.pull-in-amin {
+    animation: pull-in-amin 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-down-anim {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes move-up-anim {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes loading {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear-anim {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes pull-out-amin {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes pull-in-amin {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* 向下箭头 */
+.arrow-down {
+    animation: turn-down 0.25s linear;
+    animation-fill-mode: forwards
+}
+
+/* 向右箭头 */
+.arrow-right {
+    animation: turn-right 0.25s linear;
+    animation-fill-mode: forwards
+}
+
+@keyframes turn-down {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(90deg);
+    }
+}
+
+@keyframes turn-right {
+    from {
+        transform: rotateZ(90deg);
+    }
+
+    to {
+        transform: rotateZ(0deg);
+    }
+}
